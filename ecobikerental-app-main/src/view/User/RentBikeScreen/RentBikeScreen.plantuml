@@ -1,0 +1,70 @@
+@startuml
+
+
+  namespace view {
+    namespace User {
+      namespace RentBikeScreen {
+        class view.User.RentBikeScreen.BikeInfoController {
+            ~ paymentMethod : ObservableList<String>
+            - bankAcc : TextField
+            - batteryText : Text
+            - choiceBox : ChoiceBox
+            - depositText : Text
+            - idText : Text
+            - nameText : Text
+            - priceText : Text
+            - typeText : Text
+            + BikeInfoController()
+            + backtoParkingLotScreen()
+            + initData()
+            + initialize()
+            + rentBike()
+            + saveTransaction()
+        }
+      }
+    }
+  }
+  
+
+  namespace view {
+    namespace User {
+      namespace RentBikeScreen {
+        class view.User.RentBikeScreen.ParkingLotScreenController {
+            - batteryCol : TableColumn<Bike, String>
+            - bp : BorderPane
+            - gp : GridPane
+            - idCol : TableColumn<Bike, Integer>
+            - nameCol : TableColumn<Bike, String>
+            - nameLabel : Label
+            - priceCol : TableColumn<Bike, Double>
+            - statusCol : TableColumn<Bike, Boolean>
+            - table : TableView<Bike>
+            - typeCol : TableColumn<Bike, String>
+            + ParkingLotScreenController()
+            + getData()
+            + initData()
+            + initialize()
+            - RentBike()
+            - RentedBike()
+            - ReturnBike()
+            - backToUserScreen()
+            - goToBikeInfo()
+        }
+      }
+    }
+  }
+  
+
+  view.User.RentBikeScreen.BikeInfoController .up.|> javafx.fxml.Initializable
+  view.User.RentBikeScreen.BikeInfoController o-- controller.CreditCardController : bank
+  view.User.RentBikeScreen.BikeInfoController o-- object.Bike : bike
+  view.User.RentBikeScreen.BikeInfoController o-- controller.TransactionController : transactionController
+  view.User.RentBikeScreen.ParkingLotScreenController .up.|> javafx.fxml.Initializable
+  view.User.RentBikeScreen.ParkingLotScreenController o-- object.Bike : bike
+  view.User.RentBikeScreen.ParkingLotScreenController o-- controller.BikeController : bikeController
+  view.User.RentBikeScreen.ParkingLotScreenController o-- object.ParkingLot : parkingLot
+
+
+
+
+@enduml

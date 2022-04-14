@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-border-color: orange; -fx-border-width: 1px 0px 0px 0px;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.User.RentBikeScreen.ParkingLotScreenController">
+   <left>
+      <VBox alignment="TOP_CENTER" prefHeight="349.0" prefWidth="120.0" style="-fx-background-color: orange;" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onMouseClicked="#backToUserScreen" prefHeight="50.0" prefWidth="157.0" style="-fx-background-color: orange; -fx-border-color: #00ab81; -fx-border-width: 0px 0px 0.5px 0px;" text=" Quay lại" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/back.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onMouseClicked="#RentBike" prefHeight="50.0" prefWidth="169.0" style="-fx-background-color: orange; -fx-border-color: #00ab81; -fx-border-width: 0px 0px 0.5px 0px;" text=" Thuê xe" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/bicycle.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#ReturnBike" prefHeight="50.0" prefWidth="169.0" style="-fx-background-color: orange; -fx-border-color: #00ab81; -fx-border-width: 0px 0px 0.5px 0px;" text=" Trả xe" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/car-key.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </Button>
+            <Button layoutX="10.0" layoutY="110.0" mnemonicParsing="false" onMouseClicked="#RentedBike" prefHeight="50.0" prefWidth="128.0" style="-fx-background-color: orange; -fx-border-color: #00ab81; -fx-border-width: 0px 0px 0.5px 0px;" text="Xe đang thuê" textFill="WHITE" wrapText="true">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/info.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="20.0" right="10.0" />
+               </padding>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <GridPane fx:id="gp" style="-fx-background-color: #ffffff;" vgap="5.0" BorderPane.alignment="CENTER">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="353.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="353.0" minHeight="10.0" prefHeight="296.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="134.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <TableView fx:id="table" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+               <columns>
+                  <TableColumn fx:id="idCol" prefWidth="39.0" text="ID" />
+                  <TableColumn fx:id="nameCol" prefWidth="103.0" text="Tên" />
+                  <TableColumn fx:id="typeCol" prefWidth="92.0" text="Loại xe" />
+                  <TableColumn fx:id="batteryCol" prefWidth="64.0" text="Pin" />
+                  <TableColumn fx:id="statusCol" prefWidth="81.0" text="Trạng thái" />
+                  <TableColumn fx:id="priceCol" prefWidth="70.0" text="Giá trị xe" />
+               </columns>
+            </TableView>
+            <HBox alignment="CENTER_RIGHT" prefHeight="51.0" prefWidth="450.0" spacing="10.0" GridPane.rowIndex="2">
+               <children>
+                  <Button mnemonicParsing="false" onMouseClicked="#goToBikeInfo" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: orange;" text="Thuê" textFill="WHITE" />
+               </children>
+            </HBox>
+            <Label fx:id="nameLabel" text="Bãi xe Hà Nội" textFill="orange">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+         </padding>
+      </GridPane>
+   </center>
+</BorderPane>

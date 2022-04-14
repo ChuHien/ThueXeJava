@@ -1,0 +1,79 @@
+@startuml
+
+
+
+  namespace controller {
+    class controller.BikeController {
+        + BikeController()
+        + checkStatus()
+        + getBikeById()
+        + getBikeListByPlId()
+        + insertBike()
+        + updateStatus()
+    }
+  }
+  
+
+  namespace controller {
+    class controller.BikeTypeController {
+        + BikeTypeController()
+        + getTypes()
+        + insertBikeType()
+    }
+  }
+  
+
+  namespace controller {
+    class controller.CreditCardController {
+        - cardList : ArrayList<CreditCard>
+        + CreditCardController()
+        + addMoney()
+        + checkAmount()
+        + getCardByCardID()
+        + subtractMoney()
+        - reset()
+    }
+  }
+  
+
+  namespace controller {
+    class controller.ParkingLotController {
+        + ParkingLotController()
+        + getList()
+        + getPlById()
+    }
+  }
+  
+
+  namespace controller {
+    class controller.PriceController {
+        + PriceController()
+        + getPrices()
+        + updatePrice()
+    }
+  }
+  
+
+  namespace controller {
+    class controller.TransactionController {
+        + TransactionController()
+        + checkCardID()
+        + getRentalTransaction()
+        + insert()
+        + updateRentalTime()
+        + updateStatus()
+    }
+  }
+  
+
+  controller.BikeController o-- model.BikeModel : bModel
+  controller.BikeTypeController o-- model.BikeTypeModel : bikeTypeModel
+  controller.CreditCardController o-- model.CreditCardModel : cardModel
+  controller.ParkingLotController o-- model.ParkingLotModel : pModel
+  controller.PriceController o-- model.PriceModel : pModel
+  controller.TransactionController o-- model.TransactionModel : tModel
+
+
+
+
+@enduml

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.User.RentBikeScreen.BikeInfoController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="305.0" minHeight="10.0" prefHeight="243.66668701171875" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="123.66665649414062" minHeight="10.0" prefHeight="118.33331298828125" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <HBox style="-fx-border-color: orange;" GridPane.rowIndex="1">
+         <children>
+            <VBox prefHeight="286.0" prefWidth="209.0">
+               <children>
+                  <Text fill="#282424" strokeType="OUTSIDE" strokeWidth="0.0" text="ID: ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" top="20.0" />
+                     </VBox.margin>
+                  </Text>
+                  <Text fill="#282424" layoutX="10.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tên:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" />
+                     </VBox.margin>
+                  </Text>
+                  <Text fill="#282424" layoutX="10.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pin:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" />
+                     </VBox.margin>
+                  </Text>
+                  <Text fill="#282424" layoutX="10.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Loại xe:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" />
+                     </VBox.margin>
+                  </Text>
+                  <Text fill="#282424" layoutX="10.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Giá tiền:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" />
+                     </VBox.margin>
+                  </Text>
+               </children>
+            </VBox>
+            <VBox prefHeight="240.0" prefWidth="100.0">
+               <children>
+                  <Text fx:id="idText" fill="#282626" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" top="20.0" />
+                     </VBox.margin>
+                  </Text>
+                  <Text fx:id="nameText" fill="#282626" layoutX="10.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" />
+                     </VBox.margin>
+                  </Text>
+                  <Text fx:id="batteryText" fill="#282626" layoutX="10.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Battery">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" />
+                     </VBox.margin>
+                  </Text>
+                  <Text fx:id="typeText" fill="#282626" layoutX="10.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" />
+                     </VBox.margin>
+                  </Text>
+                  <Text fx:id="priceText" fill="#282626" layoutX="10.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" />
+                     </VBox.margin>
+                  </Text>
+               </children>
+            </VBox>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </HBox>
+      <VBox alignment="CENTER_LEFT" style="-fx-border-color: orange;" GridPane.rowIndex="2">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+               <children>
+                  <Label prefWidth="100.0" text="Tiền cọc:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="depositText" strokeMiterLimit="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20000">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+               <children>
+                  <Label prefWidth="100.0" text="Nhập mã thẻ:">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+                  <TextField fx:id="bankAcc" prefWidth="150.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font></TextField>
+                  <ChoiceBox fx:id="choiceBox" prefHeight="38.0" prefWidth="100.0" />
+                  <Button mnemonicParsing="false" onMouseClicked="#rentBike" prefHeight="31.0" prefWidth="70.0" style="-fx-background-color: orange;" text="Thuê" textFill="#f8f5f5">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onMouseClicked="#backtoParkingLotScreen" prefHeight="31.0" prefWidth="80.0" style="-fx-background-color: orange;" text="Quay lại" textFill="#f2eaea">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+         </padding>
+      </VBox>
+      <Pane style="-fx-background-color: orange;">
+         <children>
+            <Text fill="#f8fcfb" layoutX="-2.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Thông tin xe" textAlignment="CENTER" wrappingWidth="603.17578125">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</GridPane>

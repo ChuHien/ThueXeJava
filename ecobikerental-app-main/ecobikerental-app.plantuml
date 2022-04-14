@@ -1,0 +1,253 @@
+@startuml
+
+title  Class Diagram__\n
+
+  namespace controller {
+    class controller.BikeController {
+    }
+  }
+  
+
+  namespace controller {
+    class controller.BikeTypeController {
+    }
+  }
+  
+
+  namespace controller {
+    class controller.CreditCardController {
+    }
+  }
+
+  
+
+  namespace controller {
+    class controller.PriceController {
+    }
+  }
+  
+
+  namespace controller {
+    class controller.TransactionController {
+    }
+  }
+  
+
+  namespace model {
+    class model.BikeModel {
+    }
+  }
+  
+
+  namespace model {
+    class model.BikeTypeModel {
+    }
+  }
+
+
+  namespace model {
+    class model.ParkingLotModel {
+    }
+  }
+  
+
+  namespace model {
+    class model.PriceModel {
+    }
+  }
+  
+
+  namespace model {
+    class model.TransactionModel {
+    }
+  }
+  
+
+  namespace object {
+    class object.Bike {
+    }
+  }
+  
+
+  namespace object {
+    class object.BikeType {
+    }
+  }
+  
+
+  
+
+  namespace object {
+    class object.ParkingLot {
+    }
+  }
+  
+
+  namespace object {
+    class object.Price {
+    }
+  }
+  
+
+  namespace object {
+    class object.Transaction {
+    }
+  }
+  
+
+  namespace view {
+    namespace Admin {
+      class view.Admin.AdminController {
+      }
+    }
+  }
+  
+
+  namespace view {
+    namespace Admin {
+      namespace ChangePriceScreen {
+        class view.Admin.ChangePriceScreen.ChangePriceController {
+        }
+      }
+    }
+  }
+  
+
+  namespace view {
+    namespace Admin {
+      namespace NewTypeScreen {
+        class view.Admin.NewTypeScreen.NewTypeController {
+        }
+      }
+    }
+  }
+  
+
+  namespace view {
+    class view.AlertBox {
+    }
+  }
+  
+
+  namespace view {
+    class view.Main {
+    }
+  }
+  
+
+  namespace view {
+    class view.MainController {
+    }
+  }
+  
+
+  namespace view {
+    namespace User {
+      namespace RentBikeScreen {
+        class view.User.RentBikeScreen.BikeInfoController {
+        }
+      }
+    }
+  }
+  
+
+  namespace view {
+    namespace User {
+      namespace RentBikeScreen {
+        class view.User.RentBikeScreen.ParkingLotScreenController {
+        }
+      }
+    }
+  }
+  
+
+  namespace view {
+    namespace User {
+      namespace RentedBikeScreen {
+        class view.User.RentedBikeScreen.RentedBikeInfoController {
+        }
+      }
+    }
+  }
+  
+
+  namespace view {
+    namespace User {
+      namespace RentedBikeScreen {
+        class view.User.RentedBikeScreen.ScanController {
+        }
+      }
+    }
+  }
+  
+
+  namespace view {
+    namespace User {
+      namespace ReturnBikeScreen {
+        class view.User.ReturnBikeScreen.CheckoutController {
+        }
+      }
+    }
+  }
+  
+
+  namespace view {
+    namespace User {
+      namespace ReturnBikeScreen {
+        class view.User.ReturnBikeScreen.ScanController {
+        }
+      }
+    }
+  }
+  
+
+  namespace view {
+    namespace User {
+      class view.User.UserScreenController {
+      }
+    }
+  }
+  
+
+  controller.BikeController o-- model.BikeModel : bModel
+  controller.BikeTypeController o-- model.BikeTypeModel : bikeTypeModel
+  controller.CreditCardController o-- model.CreditCardModel : cardModel
+  controller.ParkingLotController o-- model.ParkingLotModel : pModel
+  controller.PriceController o-- model.PriceModel : pModel
+  controller.TransactionController o-- model.TransactionModel : tModel
+  view.Admin.AdminController .up.|> javafx.fxml.Initializable
+  view.Admin.ChangePriceScreen.ChangePriceController .up.|> javafx.fxml.Initializable
+  view.Admin.ChangePriceScreen.ChangePriceController o-- model.PriceModel : priceModel
+  view.Admin.NewTypeScreen.NewTypeController .up.|> javafx.fxml.Initializable
+  view.Admin.NewTypeScreen.NewTypeController o-- model.BikeTypeModel : bikeTypeModel
+  view.Main -up-|> javafx.application.Application
+  view.User.RentBikeScreen.BikeInfoController .up.|> javafx.fxml.Initializable
+  view.User.RentBikeScreen.BikeInfoController o-- controller.CreditCardController : bank
+  view.User.RentBikeScreen.BikeInfoController o-- object.Bike : bike
+  view.User.RentBikeScreen.BikeInfoController o-- controller.TransactionController : transactionController
+  view.User.RentBikeScreen.ParkingLotScreenController .up.|> javafx.fxml.Initializable
+  view.User.RentBikeScreen.ParkingLotScreenController o-- object.Bike : bike
+  view.User.RentBikeScreen.ParkingLotScreenController o-- controller.BikeController : bikeController
+  view.User.RentBikeScreen.ParkingLotScreenController o-- object.ParkingLot : parkingLot
+  view.User.RentedBikeScreen.RentedBikeInfoController .up.|> javafx.fxml.Initializable
+  view.User.RentedBikeScreen.RentedBikeInfoController o-- object.Bike : bike
+  view.User.RentedBikeScreen.ScanController .up.|> javafx.fxml.Initializable
+  view.User.RentedBikeScreen.ScanController o-- controller.BikeController : bikeController
+  view.User.RentedBikeScreen.ScanController o-- controller.TransactionController : transactionController
+  view.User.ReturnBikeScreen.CheckoutController o-- controller.CreditCardController : bank
+  view.User.ReturnBikeScreen.CheckoutController o-- controller.TransactionController : transactionController
+  view.User.ReturnBikeScreen.CheckoutController o-- object.Transaction : tr
+  view.User.ReturnBikeScreen.ScanController o-- controller.BikeController : bikeController
+  view.User.UserScreenController .up.|> javafx.fxml.Initializable
+  view.User.UserScreenController o-- object.ParkingLot : item
+  view.User.UserScreenController o-- controller.ParkingLotController : parkingLotController
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

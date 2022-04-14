@@ -1,0 +1,69 @@
+@startuml
+
+
+  namespace model {
+    class model.BikeModel {
+        + getBikeById()
+        + getBikeListByPlId()
+        + insert()
+        + updateStatus()
+        {static} - getConnection()
+    }
+  }
+  
+
+  namespace model {
+    class model.BikeTypeModel {
+        + getTypes()
+        + getTypesToTable()
+        + insertBikeType()
+        {static} - getConnection()
+    }
+  }
+  
+
+  namespace model {
+    class model.CreditCardModel {
+        + getByCardID()
+        + getCardList()
+        + update()
+        {static} - getConnection()
+    }
+  }
+  
+
+  namespace model {
+    class model.ParkingLotModel {
+        + getList()
+        + getPLById()
+        {static} - getConnection()
+    }
+  }
+  
+
+  namespace model {
+    class model.PriceModel {
+        + getPrices()
+        + getPricesToTable()
+        + updatePrice()
+        {static} - getConnection()
+    }
+  }
+  
+
+  namespace model {
+    class model.TransactionModel {
+        + getByBikeID()
+        + getbyCardID()
+        + insert()
+        + update()
+        + updateRentingTime()
+        {static} - getConnection()
+    }
+  }
+  
+
+
+
+
+@enduml

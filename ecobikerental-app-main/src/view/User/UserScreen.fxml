@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.User.UserScreenController">
+   <children>
+      <GridPane prefHeight="400.0" prefWidth="600.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" />
+            <ColumnConstraints />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="128.0" minHeight="0.0" prefHeight="50.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="557.0" minHeight="10.0" prefHeight="450.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <VBox prefHeight="313.0" prefWidth="800.0" spacing="15.0" style="-fx-background-color: #ffffff; -fx-border-color: orange; -fx-border-width: 1px 0px 0px 0px;" GridPane.columnSpan="2" GridPane.rowSpan="2">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="24.0" prefWidth="570.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#goToMainMenu" prefHeight="39.0" prefWidth="0.0" style="-fx-background-color: #ffffff;" />
+                        <Button mnemonicParsing="false"  prefHeight="39.0" prefWidth="11.0" style="-fx-background-color: orange; -fx-border-color: #00ab81; -fx-border-width: 0px 0px 0.5px 0px;" text=" " textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/back.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Label alignment="CENTER" prefHeight="21.0" prefWidth="410.0" text="DANH SÁCH BÃI XE" textAlignment="CENTER" textFill="#ff9f19">
+                           <font>
+                              <Font name="Arial Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <TableView fx:id="table" prefHeight="307.0" prefWidth="760.0">
+                     <columns>
+                        <TableColumn fx:id="idCol" prefWidth="38.0" text="ID" />
+                        <TableColumn fx:id="nameCol" prefWidth="133.0" text="Tên bãi xe" />
+                        <TableColumn fx:id="addressCol" minWidth="0.0" prefWidth="128.0" text="Vị trí" />
+                        <TableColumn fx:id="areaCol" minWidth="0.0" prefWidth="111.0" text="Diện tích" />
+                        <TableColumn fx:id="bikenumCol" minWidth="0.0" prefWidth="149.0" text="Số lượng xe" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="selectButton" mnemonicParsing="false" onAction="#goToParkingLotScreen" prefHeight="40.0" prefWidth="830.0" style="-fx-background-color: orange;" text="Chọn bãi" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </VBox>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </GridPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,148 @@
+@startuml
+
+
+
+  namespace object {
+    class object.Bike {
+        - battery : String
+        - id : int
+        - name : String
+        - plID : int
+        - plName : String
+        - price : double
+        - status : boolean
+        - type : String
+        + Bike()
+        + Bike()
+        + getBattery()
+        + getId()
+        + getName()
+        + getPlID()
+        + getPlName()
+        + getPrice()
+        + getType()
+        + isStatus()
+        + setBattery()
+        + setId()
+        + setName()
+        + setPlID()
+        + setPlName()
+        + setPrice()
+        + setStatus()
+        + setType()
+    }
+  }
+  
+
+  namespace object {
+    class object.BikeType {
+        - id : int
+        - name : String
+        + getId()
+        + getName()
+        + setId()
+        + setName()
+    }
+  }
+  
+
+  namespace object {
+    class object.CreditCard {
+        - amount : float
+        - cardID : String
+        - customerName : String
+        - id : int
+        + CreditCard()
+        + getAmount()
+        + getCardID()
+        + getCustomerName()
+        + getId()
+        + setAmount()
+        + setCardID()
+        + setCustomerName()
+        + setId()
+    }
+  }
+  
+
+  namespace object {
+    class object.ParkingLot {
+        - address : String
+        - area : double
+        - bikeList : ArrayList<Bike>
+        - bikeNum : int
+        - id : int
+        - name : String
+        + ParkingLot()
+        + getAddress()
+        + getArea()
+        + getBikeList()
+        + getBikeNum()
+        + getId()
+        + getName()
+        + setAddress()
+        + setArea()
+        + setBikeList()
+        + setBikeNum()
+        + setId()
+        + setName()
+    }
+  }
+  
+
+  namespace object {
+    class object.Price {
+        - id : int
+        - name : String
+        - price : double
+        + getId()
+        + getName()
+        + getPrice()
+        + setId()
+        + setName()
+        + setPrice()
+    }
+  }
+  
+
+  namespace object {
+    class object.Transaction {
+        - bikeID : int
+        - bikeName : String
+        - cardID : String
+        - date : String
+        - deposit : float
+        - id : int
+        - paymentMethod : int
+        - rentingTime : float
+        - status : boolean
+        - unlockDate : String
+        + Transaction()
+        + getBikeID()
+        + getBikeName()
+        + getCardID()
+        + getDate()
+        + getDeposit()
+        + getId()
+        + getPaymentMethod()
+        + getRentingTime()
+        + getUnlockDate()
+        + isStatus()
+        + setBikeID()
+        + setBikeName()
+        + setCardID()
+        + setDate()
+        + setDeposit()
+        + setId()
+        + setPaymentMethod()
+        + setRentingTime()
+        + setStatus()
+        + setUnlockDate()
+    }
+  }
+  
+
+
+
+
+@enduml

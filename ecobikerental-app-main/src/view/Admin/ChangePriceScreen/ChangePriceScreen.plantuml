@@ -1,0 +1,30 @@
+@startuml
+
+
+  namespace view {
+    namespace Admin {
+      namespace ChangePriceScreen {
+        class view.Admin.ChangePriceScreen.ChangePriceController {
+            ~ data : ObservableList<Price>
+            ~ input_id : TextField
+            ~ input_price : TextField
+            - id : TableColumn<Price, Integer>
+            - name : TableColumn<Price, String>
+            - price : TableColumn<Price, Double>
+            - table : TableView<Price>
+            + changePrice()
+            + getData()
+            + initialize()
+            {static} + isNumeric()
+        }
+      }
+    }
+  }
+  
+
+  view.Admin.ChangePriceScreen.ChangePriceController .up.|> javafx.fxml.Initializable
+  view.Admin.ChangePriceScreen.ChangePriceController o-- model.PriceModel : priceModel
+
+
+
+@enduml

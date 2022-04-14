@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="480.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.User.ReturnBikeScreen.CheckoutController">
+   <children>
+      <GridPane prefHeight="400.0" prefWidth="480.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="371.0" minWidth="10.0" prefWidth="290.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="293.0" minWidth="10.0" prefWidth="190.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="124.0" minHeight="-Infinity" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="292.0" minHeight="-Infinity" prefHeight="156.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="294.0" minHeight="10.0" prefHeight="201.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label alignment="CENTER" prefHeight="27.0" prefWidth="489.0" text="THANH TOÁN" textAlignment="CENTER" textFill="orange" GridPane.columnSpan="2">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <ScrollPane prefHeight="309.0" prefWidth="290.0" style="-fx-background-color: #f5f5f5; -fx-background-radius: 5px; -fx-border-radius: 5px; -fx-border-width: 5px; -fx-border-color: #f5f5f5;" GridPane.rowIndex="1" GridPane.rowSpan="2">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="330.0" prefWidth="330.0">
+                     <children>
+                        <VBox prefHeight="349.0" prefWidth="330.0" spacing="7.0">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <children>
+                              <Label text="Hóa đơn">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="365.0" spacing="10.0">
+                                 <children>
+                                    <Label prefWidth="140.0" text="Khách hàng:">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="customerLabel" prefHeight="0.0" prefWidth="160.0" text="123456">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="365.0" spacing="10.0">
+                                 <children>
+                                    <Label prefWidth="140.0" text="Xe được thuê:">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="bikeLabel" prefHeight="0.0" prefWidth="160.0"  >
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="365.0" spacing="10.0">
+                                 <children>
+                                    <Label prefWidth="140.0" text="Ngày thuê">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="timeLabel" prefHeight="0.0" prefWidth="160.0">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="365.0" spacing="10.0">
+                                 <children>
+                                    <Label prefWidth="140.0" text="Thời gian sử dụng:">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="timeLabel2" prefHeight="0.0" prefWidth="160.0">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="365.0" spacing="10.0">
+                                 <children>
+                                    <Label prefWidth="140.0" text="Tiền đặt cọc:">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="depositLabel" prefHeight="0.0" prefWidth="160.0" >
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Label prefHeight="50.0" prefWidth="245.0" text="* Tiền đặt cọc sẽ được cộng vào tài khoản trước khi trả tiền" wrapText="true">
+                                 <font>
+                                    <Font name="System Italic" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="10.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+            </ScrollPane>
+            <VBox prefHeight="142.0" prefWidth="224.0" spacing="5.0" style="-fx-background-color: #f5f5f5; -fx-background-radius: 5px; -fx-border-radius: 5px; -fx-border-width: 5px; -fx-border-color: #f5f5f5;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <Label text="Cách tính giá thuê">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font></Label>
+                  <Label fx:id="paymentMethod" prefHeight="21.0" prefWidth="184.0" text="Theo giờ">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+                  <Label text="Số tiền thanh toán">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="amountLabel" prefHeight="21.0" prefWidth="184.0" text="10.000">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="10.0" top="5.0" />
+               </GridPane.margin>
+            </VBox>
+            <VBox prefHeight="139.0" prefWidth="185.0" spacing="7.0" style="-fx-background-color: #f5f5f5; -fx-background-radius: 5px; -fx-border-radius: 5px; -fx-border-width: 5px; -fx-border-color: #f5f5f5;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <Label text="Nhập mã thẻ">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font></Label>
+                  <TextField fx:id="cardIDField" promptText="Mã thẻ ...">
+                     <font>
+                        <Font size="16.0" />
+                     </font></TextField>
+                  <Button mnemonicParsing="false" onAction="#checkout" prefHeight="35.0" prefWidth="211.0" style="-fx-background-color: orange;" text="Thanh toán" textFill="WHITE" />
+                  <Label fx:id="errorMessage" text="Thẻ không tồn tại hoặc mã thẻ không chính xác" textFill="#b50000" visible="false" wrapText="true">
+                     <font>
+                        <Font name="System Italic" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets bottom="10.0" left="5.0" right="10.0" top="5.0" />
+               </GridPane.margin>
+            </VBox>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

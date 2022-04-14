@@ -1,0 +1,31 @@
+@startuml
+
+
+
+  namespace view {
+    namespace User {
+      class view.User.UserScreenController {
+          - addressCol : TableColumn<ParkingLot, String>
+          - areaCol : TableColumn<ParkingLot, Double>
+          - bikenumCol : TableColumn<ParkingLot, Integer>
+          - idCol : TableColumn<ParkingLot, Integer>
+          - nameCol : TableColumn<ParkingLot, String>
+          - table : TableView<ParkingLot>
+          + UserScreenController()
+          + getData()
+          + goToMainMenu()
+          + goToParkingLotScreen()
+          + initialize()
+      }
+    }
+  }
+  
+
+  view.User.UserScreenController .up.|> javafx.fxml.Initializable
+  view.User.UserScreenController o-- object.ParkingLot : item
+  view.User.UserScreenController o-- controller.ParkingLotController : parkingLotController
+
+
+
+
+@enduml

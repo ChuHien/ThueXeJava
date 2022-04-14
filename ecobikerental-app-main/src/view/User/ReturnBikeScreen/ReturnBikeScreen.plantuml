@@ -1,0 +1,57 @@
+@startuml
+
+
+
+  namespace view {
+    namespace User {
+      namespace ReturnBikeScreen {
+        class view.User.ReturnBikeScreen.CheckoutController {
+            - amountLabel : Label
+            - bikeID : int
+            - bikeLabel : Label
+            - cardIDField : TextField
+            - customerLabel : Label
+            - depositLabel : Label
+            - errorMessage : Label
+            - parkingLotID : int
+            - paymentMethod : Label
+            - rentalFee : double
+            - rentalTime : double
+            - timeLabel : Label
+            - timeLabel2 : Label
+            + backToUserScreen()
+            + initData()
+            ~ checkout()
+            - feeCalculate()
+            - timeCalculate()
+        }
+      }
+    }
+  }
+  
+
+  namespace view {
+    namespace User {
+      namespace ReturnBikeScreen {
+        class view.User.ReturnBikeScreen.ScanController {
+            - errorMessage : Label
+            - idField : TextField
+            - parentPane : BorderPane
+            - parkingLotID : int
+            + checkBikeID()
+            + initData()
+            - goToCheckout()
+        }
+      }
+    }
+  }
+  
+
+  view.User.ReturnBikeScreen.CheckoutController o-- controller.CreditCardController : bank
+  view.User.ReturnBikeScreen.CheckoutController o-- controller.TransactionController : transactionController
+  view.User.ReturnBikeScreen.CheckoutController o-- object.Transaction : tr
+  view.User.ReturnBikeScreen.ScanController o-- controller.BikeController : bikeController
+
+
+
+@enduml

@@ -1,0 +1,23 @@
+@startuml
+
+
+
+  namespace view {
+    namespace Admin {
+      class view.Admin.AdminController {
+          - bp : BorderPane
+          + backToMainScreen()
+          + goToChangePrice()
+          + goToNewType()
+          + initialize()
+      }
+    }
+  }
+
+
+  view.Admin.AdminController .up.|> javafx.fxml.Initializable
+
+
+
+
+@enduml

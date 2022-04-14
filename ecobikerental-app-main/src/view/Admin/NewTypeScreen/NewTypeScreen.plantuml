@@ -1,0 +1,31 @@
+@startuml
+
+
+
+  namespace view {
+    namespace Admin {
+      namespace NewTypeScreen {
+        class view.Admin.NewTypeScreen.NewTypeController {
+            ~ data : ObservableList<BikeType>
+            ~ input_id : TextField
+            ~ input_name : TextField
+            - id : TableColumn<BikeType, Integer>
+            - name : TableColumn<BikeType, String>
+            - table : TableView<BikeType>
+            + getData()
+            + initialize()
+            {static} + isNumeric()
+            + newType()
+            {static} + onlyLettersSpaces()
+        }
+      }
+    }
+  }
+  
+
+  view.Admin.NewTypeScreen.NewTypeController .up.|> javafx.fxml.Initializable
+  view.Admin.NewTypeScreen.NewTypeController o-- model.BikeTypeModel : bikeTypeModel
+
+
+
+@enduml
